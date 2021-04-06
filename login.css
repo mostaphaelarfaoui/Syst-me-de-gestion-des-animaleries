@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+  
+  }
+  .petshop {
+    background-color:rgb(73, 25, 21);
+    height: 70px;
+  }
+  
+  .petshop a {
+    float: left;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: bold;  
+  }
+  .container{
+    width: 310px;
+    margin: auto;
+    background-color: rgb(73, 25, 21);
+    text-align: center;
+    border-radius: 12px;
+    height: 340px;
+    padding: 0 15px;
+    transform: translateY(50%);
+}
+h2{
+    color: white;
+    text-align: center;
+    padding: 12px;
+    background-color: rgb(73, 25, 21);;
+    width: 100%;
+    transform: translate(-12px, 0px);
+    border-radius: 12px 12px 0px 0px;
+}
+.bord {
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px rgb(255, 255, 255) solid;
+    /* border-style: none; */
+}
+
+.btn
+{
+    border-radius: 30px;
+    background-color: white;
+    cursor: pointer;
+    margin: 40px 10px 0 10px;
+    width: 40%;
+    height: 40px;
+    color: black;
+    padding: 5px;
+} 
+.save {
+    color: rgb(190, 190, 190);
+    position: absolute;
+    top: 287px;
+    left: 145px;
+}
