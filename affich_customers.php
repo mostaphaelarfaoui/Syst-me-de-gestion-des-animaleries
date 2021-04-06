@@ -1,7 +1,7 @@
 <?php 
 include("./connection_db.php");
 $query = "SELECT * FROM customers";
-$result = mysqli_query($con,$query);
+$result = mysqli_query($conn,$query);
 ?>
 
 

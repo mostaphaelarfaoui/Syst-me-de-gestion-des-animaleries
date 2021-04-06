@@ -1,5 +1,23 @@
 <?php
 include("./connection_db.php");
+if(isset($_GET['delete']))
+{
+    $id = $_GET['id'];
+    $query = "DELETE FROM products WHERE pp_id = '$id'";
+    $query_run = mysqli_query($con,$query);
+    if($query_run)
+    {
+        echo 'data delete';
+    }
+    else
+    {
+        echo 'data not delete';
+    }
+}
+?>
+
+<?php
+
 $query = "SELECT * from products";
 $result = mysqli_query($con,$query);
 
@@ -64,8 +82,8 @@ $result = mysqli_query($con,$query);
   </tbody>
 </table>
   
-<form action="" methode= "POST">
-    <input type="text" class="inp" placeholder="Enter the id delete" >
+<form action="" methode= "GET">
+    <input type="text" name="id" class="inp" placeholder="Enter the id delete" >
     <button class="btn3" name="delete" type="submit">Delete</button>
     </form>
 </body>
