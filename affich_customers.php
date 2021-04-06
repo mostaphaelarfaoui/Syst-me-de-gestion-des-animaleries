@@ -1,7 +1,24 @@
-<?php 
+<?php
 include("./connection_db.php");
+if(isset($_GET['delete']))
+{
+    $id = $_GET['id'];
+    $query = "DELETE FROM customers WHERE cs_id = '$id'";
+    $query_run = mysqli_query($con,$query);
+    if($query_run)
+    {
+        echo 'data delete';
+    }
+    else
+    {
+        echo 'data not delete';
+    }
+}
+?>
+
+<?php 
 $query = "SELECT * FROM customers";
-$result = mysqli_query($conn,$query);
+$result = mysqli_query($con,$query);
 ?>
 
 
@@ -67,7 +84,7 @@ $result = mysqli_query($conn,$query);
         ?>
   </tbody>
 </table>
-<form action="delete_customer.php" methode= "POST">
+<form action="" methode= "GET">
     <input type="text" class="inp" name="id" placeholder="Enter the id delete" >
     <button class="btn4" name="delete" type="submit">Delete</button>
     </form>
