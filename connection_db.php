@@ -1,5 +1,4 @@
 <?php
-
 $con = mysqli_connect('localhost','root','','animals');
 // if($con){
 //     echo 'connected';

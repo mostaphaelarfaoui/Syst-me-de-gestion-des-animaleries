@@ -2,10 +2,7 @@
 include("./connection_db.php");
 $query = "SELECT * from sales_details";
 $result = mysqli_query($con,$query);
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

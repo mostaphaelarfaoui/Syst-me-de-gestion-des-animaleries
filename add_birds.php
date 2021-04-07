@@ -12,7 +12,6 @@
         <div class="navbar">
        <div class="logo">
        <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
-           
             </div> 
         </div>
         <a href="affich_birds.php"> <button class="btn">Back</button></a>
@@ -31,9 +30,7 @@
             </form>
         </div>
     </div>
-
 </div>
-
 
 <?php
 include("./connection_db.php");
@@ -50,14 +47,7 @@ if(isset($_POST['save'])){
     else{
        echo"done!";
     }
-    
-    
     }
-
-
-
 ?>
-
-    
 </body>
 </html>

@@ -1,14 +1,11 @@
-
 <?php
 include("./connection_db.php");
-
 if(isset($_POST['update']))
 {
     $userid   = $_POST['sd_id'];
     $cs = $_POST['cs_id'];
     $dat = $_POST['date'];
     $tot = $_POST['total'];
-    
 
     $query = " UPDATE sales_details SET   cs_id = '".$cs."',
                                        date = '".$dat."',
@@ -16,7 +13,6 @@ if(isset($_POST['update']))
                                       
                                 WHERE  sd_id = '".$userid."'";
     $result = mysqli_query($con,$query);
-
     if($result)
     {
         echo "your update is success";
@@ -26,7 +22,6 @@ if(isset($_POST['update']))
         echo " your update not success";
     }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +33,6 @@ if(isset($_POST['update']))
     <title>add birds</title>
 </head>
 <body>
-    
     <div class="container">
         <div class="navbar">
             <div class="logo"><a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>

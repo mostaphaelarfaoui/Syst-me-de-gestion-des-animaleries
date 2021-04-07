@@ -25,7 +25,6 @@
             </form>
         </div>
     </div>
-
 </div>
 
 <?php
@@ -47,14 +46,7 @@ if(isset($_POST['save'])){
     else{
         echo "Done!";
     }
-    
-    
     }
-    
-
-
-
 ?>
-    
 </body>
 </html>

@@ -17,10 +17,8 @@ if(isset($_GET['delete']))
 ?>
 
 <?php
-
 $query = "SELECT * from animals";
 $result = mysqli_query($con,$query);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +40,6 @@ $result = mysqli_query($con,$query);
       <a href="addanimals.php" class="btn1">Add new animal</a>
       <a href="update_animal.php" class="btn2">update animal</a>
     </section>
-
 <table id="customers" class="table table-striped">
   <thead>
     <tr>
@@ -59,9 +56,7 @@ $result = mysqli_query($con,$query);
   <tbody>
   <?php  if($row = mysqli_num_rows($result)>0) : ?>
     <?php while($data = mysqli_fetch_assoc($result)) : ?>
-
     <tr>
-     
       <td><?= $data['pet_id']; ?></td>
       <td><?= $data['pet_category']; ?></td>
       <td><?= $data['breed']; ?></td>
@@ -70,16 +65,11 @@ $result = mysqli_query($con,$query);
       <td><?= $data['age']; ?></td>
       <td><?= $data['fur']; ?></td>
       <td><?= $data['cost']; ?></td>
-      
-      
     </tr>
     <?php endwhile; ?>
     <?php endif;  ?>
   </tbody>
 </table>
-
-
-
 <form action="" methode= "GET">
     <input type="text" class="inp" name="id" placeholder="Enter the id delete" >
     <button class="btn3" name="delete" type="submit">Delete</button>

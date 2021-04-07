@@ -15,12 +15,9 @@ if(isset($_GET['delete']))
     }
 }
 ?>
-
 <?php
-
 $query = "SELECT * from birds";
 $result = mysqli_query($con,$query);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +30,6 @@ $result = mysqli_query($con,$query);
     <title>Page Birds</title>
 </head>
 <body>
-
     <nav>
     <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
       <h1>Birds</h1>
@@ -43,7 +39,6 @@ $result = mysqli_query($con,$query);
     <a href="add_birds.php" class="btn1">Add new bird</a>
     <a href="update_birds.php" class="btn2">update bird</a>
     </section>
-
 <table id="customers" class="table table-striped">
   <thead>
     <tr>
@@ -52,21 +47,17 @@ $result = mysqli_query($con,$query);
       <th class="th" scope="col">type</th>
       <th class="th" scope="col">noise</th>
       <th class="th" scope="col">cost</th>
-
     </tr>
     </thead>
   <tbody>
   <?php  if($row = mysqli_num_rows($result)>0) : ?>
     <?php while($data = mysqli_fetch_assoc($result)) : ?>
-
     <tr>
-     
       <td><?= $data['pet_id']; ?></td>
       <td><?= $data['pet_category']; ?></td>
       <td><?= $data['type']; ?></td>
       <td><?= $data['noise']; ?></td>
       <td><?= $data['cost']; ?></td>
-      
     </tr>
     <?php endwhile; ?>
     <?php endif;  ?>

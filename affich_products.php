@@ -15,13 +15,9 @@ if(isset($_GET['delete']))
     }
 }
 ?>
-
 <?php
-
 $query = "SELECT * from products";
 $result = mysqli_query($con,$query);
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,9 +30,7 @@ $result = mysqli_query($con,$query);
     <title>Page products</title>
 </head>
 <body>
-
     <nav>
-
     <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
       <h1>pets products</h1>
       <a class="logout" href="home.php">logout</a>
@@ -58,7 +52,6 @@ $result = mysqli_query($con,$query);
   <tbody>
   <?php  if($row = mysqli_num_rows($result)>0) : ?>
     <?php while($data = mysqli_fetch_assoc($result)) : ?>
-
     <tr>
       <td><?= $data['pp_id']; ?></td>
       <td><?= $data['name']; ?></td>

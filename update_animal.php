@@ -1,7 +1,5 @@
-
 <?php
 include("./connection_db.php");
-
 if(isset($_POST['update']))
 {
     $userid   = $_POST['pet_id'];
@@ -12,7 +10,6 @@ if(isset($_POST['update']))
     $age  = $_POST['age'];
     $fur  = $_POST['fur'];
     $cos  = $_POST['cost'];
-
     $query = " UPDATE animals  SET   pet_category = '".$cat."',
                                        breed = '".$breed."',
                                        weight = '".$weight."',
@@ -22,7 +19,6 @@ if(isset($_POST['update']))
                                        cost = '".$cos."'
                                 WHERE  pet_id = '".$userid."'";
     $result = mysqli_query($con,$query);
-
     if($result)
     {
         echo "your update is success";
@@ -32,7 +28,6 @@ if(isset($_POST['update']))
         echo " your update not success";
     }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,15 +39,12 @@ if(isset($_POST['update']))
     <title>add animals</title>
 </head>
 <body>
-    
     <div class="container">
         <div class="navbar">
             <div class="logo"><a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
-                
             </div>
             </div>
             <a href="affich_animals.php"> <button class="btn">Back</button></a>
-        
         <div class="animo">
             <form action="" method="POST">
                 <p><input type="text" placeholder="Enter pet_id" name="pet_id"></p>

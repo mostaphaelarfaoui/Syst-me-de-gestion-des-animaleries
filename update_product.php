@@ -1,7 +1,5 @@
-
 <?php
 include("./connection_db.php");
-
 if(isset($_POST['update']))
 {
     $userid   = $_POST['id'];
@@ -16,7 +14,6 @@ if(isset($_POST['update']))
                                        belong_to = '".$belongs_to."'
                                 WHERE  pp_id     = '".$userid."'";
     $result = mysqli_query($con,$query);
-
     if($result)
     {
         echo "your update is success";
@@ -26,7 +23,6 @@ if(isset($_POST['update']))
         echo " your update not success";
     }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,11 +34,9 @@ if(isset($_POST['update']))
     <title>update product</title>
 </head>
 <body>
-    
     <div class="container">
         <div class="navbar">
             <div class="logo"><a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
-               
             </div> 
         </div>
         <a href="affich_products.php"> <button class="btn">Back</button></a>
