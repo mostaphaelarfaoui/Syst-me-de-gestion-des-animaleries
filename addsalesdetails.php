@@ -7,16 +7,13 @@ if(isset($_POST['save_btn'])){
 
    
     $query="INSERT INTO `sales_details` (cs_id,date,total) VALUES ('$cs_id','$date','$total')";
-    
     $result = mysqli_query($con, $query);
-    
     if (!$result) {
         die("error").mysqli_error($result);
     }
     else{
         echo "Done!";
     }
-    
     }
     ?>
 <!DOCTYPE html>
@@ -46,7 +43,6 @@ if(isset($_POST['save_btn'])){
             </form>
         </div>
     </div>
-
 </div>
 </body>
 </html>

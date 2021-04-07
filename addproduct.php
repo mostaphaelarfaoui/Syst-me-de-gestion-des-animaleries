@@ -7,16 +7,13 @@ if(isset($_POST['save'])){
     $belongs_to  = $_POST['belongs_to'];
    
     $query="INSERT INTO `products` (name,type,cost,belong_to) VALUES ('$pp_name','$pp_type','$cost','$belongs_to')";
-    
     $result = mysqli_query($con, $query);
-    
     if (!$result) {
         die("error").mysqli_error($result);
     }
     else{
         echo "Done!";
     }
-    
     }
     ?>
 <!DOCTYPE html>
@@ -32,8 +29,7 @@ if(isset($_POST['save'])){
 <div class="container">
         <div class="navbar">
             <div class="logo">
-            <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
-                
+            <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>    
             </div> 
         </div>
         <a href="affich_products.php"> <button class="btn">Back</button></a>
@@ -47,7 +43,6 @@ if(isset($_POST['save'])){
             </form>
         </div>
     </div>
-
 </div>
 </body>
 </html>

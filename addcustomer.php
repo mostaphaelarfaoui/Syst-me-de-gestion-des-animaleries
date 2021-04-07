@@ -1,13 +1,11 @@
 <?php
 include("./connection_db.php");
-
 if(isset($_POST['add'])){
     $cs_fname = $_POST['cs_fname'];
     $cs_minit = $_POST['cs_minit'];
     $cs_lname = $_POST['cs_lname'];
     $address = $_POST['address'];
 
-    
     $query = "INSERT INTO customers (fname, minit, lname, adress) VALUES ('$cs_fname', '$cs_minit', '$cs_lname', '$address')";
     $query_run = mysqli_query($con, $query);
     if($query_run){
@@ -16,7 +14,6 @@ if(isset($_POST['add'])){
         echo 'add not ok';
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -29,15 +26,12 @@ if(isset($_POST['add'])){
     <title>add customer</title>
 </head>
 <body>
-    
     <div class="container">
         <div class="navbar">
             <div class="logo">
             <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
-                
             </div> 
         </div>
-        
         <a href="affich_customers.php"> <button class="btn">Back</button></a>
         <div class="animo">
             <form action="" method="post">

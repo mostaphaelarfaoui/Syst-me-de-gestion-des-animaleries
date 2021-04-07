@@ -2,10 +2,7 @@
 include("./connection_db.php");
 $query = "SELECT * from sales_details";
 $result = mysqli_query($con,$query);
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +17,7 @@ $result = mysqli_query($con,$query);
     <nav>
     <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
       <h1>Sales details</h1>
-      <a class="logout" href="logout.php">logout</a>
+      <a class="logout" href="home.php">logout</a>
     </nav>
     <section>
       <a href="addsalesdetails.php" class="btn1">Add new details</a>

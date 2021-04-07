@@ -15,13 +15,10 @@ if(isset($_GET['delete']))
     }
 }
 ?>
-
 <?php 
 $query = "SELECT * FROM customers";
 $result = mysqli_query($con,$query);
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,12 +30,10 @@ $result = mysqli_query($con,$query);
     <title>Page Animals</title>
 </head>
 <body>
-
     <nav>
     <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
       <h1>Customers</h1>
-      <a class="logout" href="">logout</a>
-
+      <a class="logout" href="home.php">logout</a>
     </nav>
 <section>
     <a href="addcustomer.php" class="btn1">Add new customer</a>
@@ -61,7 +56,6 @@ $result = mysqli_query($con,$query);
             $minit = $row['minit'];
             $lname = $row['lname'];
             $adress = $row['adress'];
-
         ?>
   </thead>
   <tbody>
