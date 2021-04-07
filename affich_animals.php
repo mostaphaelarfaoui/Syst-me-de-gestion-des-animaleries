@@ -33,20 +33,14 @@ $result = mysqli_query($con,$query);
     <title>Page Animals</title>
 </head>
 <body>
-
     <nav>
     <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
       <h1>Animals</h1>
       <a class="logout" href="logout.php">logout</a>
     </nav>
   <section>
-      <form action="" methode= "POST">
       <a href="addanimals.php" class="btn1">Add new animal</a>
-      </form>
-
-      <form action="" methode= "POST">
       <a href="update_animal.php" class="btn2">update animal</a>
-      </form>
     </section>
 
 <table id="customers" class="table table-striped">

@@ -21,7 +21,6 @@ if(isset($_GET['delete']))
 $query = "SELECT * from birds";
 $result = mysqli_query($con,$query);
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,14 +40,8 @@ $result = mysqli_query($con,$query);
       <a class="logout"  href="logout.php">logout</a>
     </nav>
 <section>
-    <form action="" methode= "POST">
     <a href="add_birds.php" class="btn1">Add new bird</a>
-    </form>
-
-    <form action="" methode= "POST">
     <a href="update_birds.php" class="btn2">update bird</a>
-
-    </form>
     </section>
 
 <table id="customers" class="table table-striped">

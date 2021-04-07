@@ -42,15 +42,9 @@ $result = mysqli_query($con,$query);
       <a class="logout" href="logout.php">logout</a>
     </nav>
 <section>
-    <form action="" methode= "POST">
-    <a href="addproduct.php" class="btn1">Add new product</a>
-    </form>
-
-    <form action="" methode= "POST">
-    <a href="update_product.php" class="btn2">update product</a>
-    </form>
+      <a href="addproduct.php" class="btn1">Add new product</a>
+      <a href="update_product.php" class="btn2">update product</a>
     </section>
-
 <table id="customers" class="table table-striped">
   <thead>
     <tr>
@@ -59,29 +53,23 @@ $result = mysqli_query($con,$query);
       <th class="th" scope="col">pp_type</th>
       <th class="th" scope="col">cost</th>
       <th class="th" scope="col">belongs_to</th>
-    
     </tr>
-  
   </thead>
   <tbody>
   <?php  if($row = mysqli_num_rows($result)>0) : ?>
     <?php while($data = mysqli_fetch_assoc($result)) : ?>
 
     <tr>
-     
       <td><?= $data['pp_id']; ?></td>
       <td><?= $data['name']; ?></td>
       <td><?= $data['type']; ?></td>
       <td><?= $data['cost']; ?></td>
       <td><?= $data['belong_to']; ?></td>
-     
-      
     </tr>
     <?php endwhile; ?>
     <?php endif;  ?>
   </tbody>
 </table>
-  
 <form action="" methode= "GET">
     <input type="text" name="id" class="inp" placeholder="Enter the id delete" >
     <button class="btn3" name="delete" type="submit">Delete</button>

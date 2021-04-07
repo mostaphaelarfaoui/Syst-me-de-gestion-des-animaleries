@@ -17,35 +17,15 @@ $result = mysqli_query($con,$query);
     <title>Page sales details</title>
 </head>
 <body>
-
     <nav>
     <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
       <h1>Sales details</h1>
       <a class="logout" href="logout.php">logout</a>
     </nav>
     <section>
-      <form action="" methode= "POST">
       <a href="addbrird.php" class="btn1">Add new details</a>
-
-      </form>
-
-      <form action="" methode= "POST">
       <a href="update_saledetails.php" class="btn2">update details</a>
-
-      </form>
-
-      <form action="" methode= "POST">
-      <a href="addbrird.php" class="btn3">sold products</a>
-
-      </form>
-
-      <form action="" methode= "POST">
-      <a href="addbrird.php" class="btn4">old pets</a>
-
-      </form>
     </section>
-
-
 <table id="customers" class="table table-striped">
   <thead>
     <tr>
@@ -53,22 +33,16 @@ $result = mysqli_query($con,$query);
       <th class="th" scope="col">cs_id</th>
       <th class="th" scope="col">date</th>
       <th class="th" scope="col">total</th>
-     
     </tr>
     </thead>
   <tbody>
   <?php  if($row = mysqli_num_rows($result)>0) : ?>
     <?php while($data = mysqli_fetch_assoc($result)) : ?>
-
     <tr>
-     
       <td><?= $data['sd_id']; ?></td>
       <td><?= $data['cs_id']; ?></td>
       <td><?= $data['date']; ?></td>
       <td><?= $data['total']; ?></td>
-      
-     
-      
     </tr>
     <?php endwhile; ?>
     <?php endif;  ?>

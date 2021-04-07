@@ -34,7 +34,7 @@ if(isset($_POST['update']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./updat/update_birds.css">
+    <link rel="stylesheet" href="style/updatesales.css">
     <title>add birds</title>
 </head>
 <body>
@@ -42,11 +42,9 @@ if(isset($_POST['update']))
     <div class="container">
         <div class="navbar">
             <div class="logo"><a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
-                
             </div> 
-            <a href="./affiche_animaux.php"><button>Lougout</button></a>
         </div>
-        <a class="btn" href="customers.php" >Back</a>
+        <a href="affich_details.php"> <button class="btn">Back</button></a>
         <div class="animo">
             <form action="" method="POST">
                 <p><input type="text" placeholder="Enter sd_id" name="sd_id"></p>

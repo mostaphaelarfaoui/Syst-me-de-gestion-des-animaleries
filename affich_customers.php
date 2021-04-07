@@ -41,16 +41,9 @@ $result = mysqli_query($con,$query);
 
     </nav>
 <section>
-    <form action="" methode= "POST">
     <a href="addcustomer.php" class="btn1">Add new customer</a>
-    </form>
-
-    <form action="" methode= "POST">
     <a href="update_customer.php" class="btn2">update customer</a>
-    </form>
-
     </section>
-
 <table id="customers" class="table table-striped">
   <thead>
     <tr>
