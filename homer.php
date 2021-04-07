@@ -12,9 +12,9 @@
 
         <div class="petshop">
             <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
-            <a href="home.php">pets shop</a>
+            <a href="">pets shop</a>
             <div class="petshop-right">
-              <a href="logout.php">logout</a>
+              <a href="home.php">logout</a>
             </div>
           </div>
       

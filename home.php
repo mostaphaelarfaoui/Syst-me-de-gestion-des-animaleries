@@ -45,7 +45,7 @@ if (isset($_POST['enter'])) {
 </head>
 <body>
 <div class="petshop">
-<a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
+<a class="active" href=""><img src="img//ic_add_pet.png"></a>
             <a href="">pets shop</a>
             
           </div>
