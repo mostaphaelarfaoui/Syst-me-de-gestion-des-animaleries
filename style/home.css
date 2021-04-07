@@ -17,6 +17,9 @@ body {
     font-weight: bold;  
   }
   .container{
+    position: absolute;
+    top: 0%;
+    left: 34%;
     width: 310px;
     margin: auto;
     background-color: rgb(73, 25, 21);
