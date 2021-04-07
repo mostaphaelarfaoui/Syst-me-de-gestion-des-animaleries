@@ -23,7 +23,7 @@ $result = mysqli_query($con,$query);
       <a class="logout" href="logout.php">logout</a>
     </nav>
     <section>
-      <a href="addbrird.php" class="btn1">Add new details</a>
+      <a href="addsalesdetails.php" class="btn1">Add new details</a>
       <a href="update_saledetails.php" class="btn2">update details</a>
     </section>
 <table id="customers" class="table table-striped">

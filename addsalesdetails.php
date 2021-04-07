@@ -1,13 +1,12 @@
 <?php
 include("./connection_db.php");
-if(isset($_POST['save'])){
-    $sd_iD = $_POST['sd_iD'];
+if(isset($_POST['save_btn'])){
     $cs_id = $_POST['cs_id'];
     $date = $_POST['date'];
     $total = $_POST['total'];
 
    
-    $query="INSERT INTO `sales_details` (name,type,cost,belong_to) VALUES ('$pp_name','$pp_type','$cost','$belongs_to')";
+    $query="INSERT INTO `sales_details` (cs_id,date,total) VALUES ('$cs_id','$date','$total')";
     
     $result = mysqli_query($con, $query);
     
@@ -27,7 +26,7 @@ if(isset($_POST['save'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style/updatesalesgit .css">
+    <link rel="stylesheet" href="style/updatesales.css">
 </head>
 <body>
 <div class="container">
@@ -40,8 +39,8 @@ if(isset($_POST['save'])){
         <a href="affich_salesdetails.php"> <button class="btn">Back</button></a>
         <div class="animo">
             <form action="" method="post">
-                <p><input type="text" placeholder="Enter sd_iD"  name="sd_iD"></p>
                 <p><input type="text" placeholder="Enter cs_id"  name="cs_id"></p>
+                <p><input type="date" placeholder="Enter date"  name="date"></p>
                 <p><input type="text" placeholder="Enter total" name="total"></p>
                 <input type="submit" value="save" name="save_btn" class="save_btn">
             </form>
