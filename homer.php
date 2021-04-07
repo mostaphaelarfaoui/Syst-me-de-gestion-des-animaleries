@@ -26,7 +26,7 @@
             <button class="button button1"  type="submit" formaction="affich_animals.php">animals</button>
             <button class="button button2"  type="submit" formaction="affich_birds.php ">Birds</button>
             <button class="button button3"  type="submit"formaction="affich_products.php" >products</button>
-            <button class="button button4"  type="submit"formaction="affich_details.php" >salesdetails</button>
+            <button class="button button4"  type="submit"formaction="affich_salesdetails.php" >salesdetails</button>
             <button class="button button5"  type="submit" formaction="affich_customers.php">customer</button>  
         
      </form> 
