@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html>
     <head>
@@ -12,7 +15,7 @@
             <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
             <a href="">pets shop</a>
             <div class="petshop-right">
-              <a href="home.php">logout</a>
+              <a href="logout.php">logout</a>
             </div>
           </div>
      <div class="screen">      

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("./connection_db.php");
 if(isset($_POST['save_btn'])){
     $cs_id = $_POST['cs_id'];

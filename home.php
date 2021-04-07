@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("./connection_db.php");
 if (isset($_POST['enter'])) {
  $name = trim(strip_tags($_POST["user_name"]));
@@ -10,7 +11,8 @@ if (isset($_POST['enter'])) {
  {
     while($row=mysqli_fetch_assoc($result)){
         if($name === $row['user_name'] && $pass===$row['password'])
-        {          
+        {  
+            $_SESSION["user_name"] = $name;        
               header('Location: ./homer.php');     
         }
         else

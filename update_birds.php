@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("./connection_db.php");
 if(isset($_POST['update']))
 {

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("./connection_db.php");
 if(isset($_GET['delete']))
 {
@@ -33,7 +34,7 @@ $result = mysqli_query($con,$query);
     <nav>
     <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
       <h1>Customers</h1>
-      <a class="logout" href="home.php">logout</a>
+      <a class="logout" href="logout.php">logout</a>
     </nav>
 <section>
     <a href="addcustomer.php" class="btn1">Add new customer</a>

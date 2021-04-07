@@ -33,6 +33,7 @@
 </div>
 
 <?php
+session_start();
 include("./connection_db.php");
 if(isset($_POST['save'])){
     $pet_category = $_POST['pet_category'];
