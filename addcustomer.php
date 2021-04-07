@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("./connection_db.php");
 if(isset($_POST['add'])){
     $cs_fname = $_POST['cs_fname'];

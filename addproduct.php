@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("./connection_db.php");
 if(isset($_POST['save'])){
     $pp_name = $_POST['pp_name'];
