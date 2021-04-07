@@ -2,12 +2,9 @@
 include("./connection_db.php");
 if (isset($_POST['enter'])) {
     
-
-
  $name = trim(strip_tags($_POST["lname"]));
  $pass = trim(strip_tags($_POST["password"]));
 
- 
  $query = "SELECT * FROM customers WHERE lname = '$name' && password = '$pass'";
  $result=mysqli_query($con,$query);
 
@@ -27,8 +24,6 @@ if (isset($_POST['enter'])) {
             header('Location: ./login.php');
             
         }
-
-
     }
 
  }

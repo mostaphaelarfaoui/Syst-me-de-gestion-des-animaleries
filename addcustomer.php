@@ -12,11 +12,9 @@ if(isset($_POST['add'])){
     $query_run = mysqli_query($con, $query);
     if($query_run){
         echo 'add ok';
-        // echo "<p class='link'>your skill has been added click <a href='logout.php'><button type='button' class='btn btn-outline-success'>Here</button></a> to logout</p> ";
     }else{
         echo 'add not ok';
     }
-
 }
 
 ?>
@@ -34,7 +32,8 @@ if(isset($_POST['add'])){
     
     <div class="container">
         <div class="navbar">
-            <div class="logo"><img src="./img/ic_add_pet.png">
+            <div class="logo">
+                <img src="./img/ic_add_pet.png">
                 <h3>Add_customer</h3>
             </div> 
         </div>

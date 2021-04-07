@@ -41,13 +41,11 @@ $result = mysqli_query($con,$query);
     </nav>
   <section>
       <form action="" methode= "POST">
-
       <a href="addanimals.php" class="btn1">Add new animal</a>
       </form>
 
       <form action="" methode= "POST">
-
-      <a href="update_animal.php" class="btn2">update bird</a>
+      <a href="update_animal.php" class="btn2">update animal</a>
       </form>
     </section>
 
