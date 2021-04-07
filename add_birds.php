@@ -11,8 +11,9 @@
 <div class="container">
         <div class="navbar">
        <div class="logo">
-       <img src="./img/ic_add_pet.png">
-            <h3>Birds</h3></div> 
+       <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
+           
+            </div> 
         </div>
         <a href="affich_birds.php"> <button class="btn">Back</button></a>
         <div class="animo">

@@ -12,7 +12,11 @@ nav{
 h1{
     margin-left: 15%;
 }
-a{
+.img{
+    position: absolute;
+    left: 15%;
+}
+.logout{
     position: absolute;
     top: 3%;
     left: 93%;

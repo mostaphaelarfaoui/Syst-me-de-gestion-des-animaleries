@@ -62,6 +62,11 @@
     margin-bottom: 10px;
 
 }
+.active{
+    position: absolute;
+    left: 15%;
+    
+}
 .save_btn{
     background-color:#b91488 ;
     cursor: pointer;

@@ -19,9 +19,9 @@ $result = mysqli_query($con,$query);
 <body>
 
     <nav>
-      <img src="./ic_add_pet.png" alt="">
+    <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
       <h1>Sales details</h1>
-      <a href="logout.php">logout</a>
+      <a class="logout" href="logout.php">logout</a>
     </nav>
     <section>
       <form action="" methode= "POST">

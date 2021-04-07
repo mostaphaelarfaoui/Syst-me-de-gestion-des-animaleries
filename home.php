@@ -1,37 +1,66 @@
-<!doctype html>
-<html>
-    <head>
-        <title>
-            Petshop
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="home.css">
+<?php
+include("./connection_db.php");
+if (isset($_POST['enter'])) {
+    
+ $name = trim(strip_tags($_POST["user_name"]));
+ $pass = trim(strip_tags($_POST["password"]));
 
-    </head>
-    <body>
+ $query = "SELECT * FROM admin WHERE user_name = '$name' && password = '$pass'";
+ $result=mysqli_query($con,$query);
 
-        <div class="petshop">
-            <a class="active" href="home.php"><img src="image/ic_add_pet.png"></a>
-            <a href="home.php">pets shop</a>
-            <div class="petshop-right">
-              <a href="logout.php">logout</a>
-            </div>
-          </div>
-      
-
-       
-     <div class="screen">      
-     <form>
-          
-            <button class="button button1"  type="submit" formaction="affich_animals.php">animals</button>
-            <button class="button button2"  type="submit" formaction="affich_birds.php ">Birds</button>
-            <button class="button button3"  type="submit"formaction="affich_products.php" >products</button>
-            <button class="button button4"  type="submit"formaction="affich_details.php" >salesdetails</button>
-            <button class="button button5"  type="submit" formaction="affich_customers.php">customer</button>  
+ if($result)
+ {
+    while($row=mysqli_fetch_assoc($result)){
         
-     </form> 
-    </div>
+    
+        if($name === $row['user_name'] && $pass===$row['password'])
+        {          
+              header('Location: ./homer.php');
+                
+        }
 
-    </body>
-   
+        else
+        {
+            header('Location: ./home.php');
+            
+        }
+    }
+
+ }
+
+}
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/home.css">
+    
+    <title>Login in</title>
+</head>
+<body>
+<div class="petshop">
+            <a class="active" href=""><img src="image/ic_add_pet.png"></a>
+            <a href="">pets shop</a>
+            
+          </div>
+<form action="" method="POST">  
+ 
+ <div class="container">
+     
+ <h2 class="login">Login</h2><br>
+ <input type="lname" name="user_name" placeholder="enter your user_name" class="bord" ><br>
+ <input type="password" name="password" placeholder="enter yourPassword" class="bord"><br>
+ <input type="submit" name="enter" class="btn" value="Envoyer"><br>
+</form>
+</div>
+
+</body>
+</html>  
+</body>
 </html>

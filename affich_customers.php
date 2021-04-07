@@ -35,9 +35,9 @@ $result = mysqli_query($con,$query);
 <body>
 
     <nav>
-    <img src="/image/ic_add_pet.png" alt="">
+    <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
       <h1>Customers</h1>
-      <a href="">logout</a>
+      <a class="logout" href="">logout</a>
 
     </nav>
 <section>
