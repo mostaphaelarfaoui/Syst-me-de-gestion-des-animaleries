@@ -2,12 +2,14 @@
 session_start();
 include("./connection_db.php");
 if(isset($_POST['save_btn'])){
+
+    $sd_id = $_POST['sd_id'];
     $cs_id = $_POST['cs_id'];
     $date = $_POST['date'];
     $total = $_POST['total'];
 
    
-    $query="INSERT INTO `sales_details` (cs_id,date,total) VALUES ('$cs_id','$date','$total')";
+    $query="INSERT INTO `sales_details` ( sd_id,cs_id,date,total) VALUES ('$sd_id','$cs_id','$date','$total')";
     $result = mysqli_query($con, $query);
     if (!$result) {
         die("error").mysqli_error($result);
@@ -37,6 +39,7 @@ if(isset($_POST['save_btn'])){
         <a href="affich_salesdetails.php"> <button class="btn">Back</button></a>
         <div class="animo">
             <form action="" method="post">
+                <p><input type="text" placeholder="Enter sd_id"  name="sd_id"></p>
                 <p><input type="text" placeholder="Enter cs_id"  name="cs_id"></p>
                 <p><input type="date" placeholder="Enter date"  name="date"></p>
                 <p><input type="text" placeholder="Enter total" name="total"></p>

@@ -101,11 +101,11 @@ section{
 }
 .btn4{
     position: absolute;
-    left: 83%;
+    left: 19%;
     background-color:#ff9307;
     color: #ffffff;
     color: #ffff;
-    width: 14%;
+    width: 8%;
     height: 44px;
     border-radius: 25% 10%;
     font-size: 13px;
@@ -127,6 +127,7 @@ section{
     width: 6%;
     height: 44px;
     border-radius: 25% 10%;
+    
 }
 .inp{
    

@@ -39,7 +39,7 @@ if(isset($_POST['update']))
             <div class="logo"><a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
             </div> 
         </div>
-        <a href="affich_details.php"> <button class="btn">Back</button></a>
+        <a href="affich_salesdetails.php"> <button class="btn">Back</button></a>
         <div class="animo">
             <form action="" method="POST">
                 <p><input type="text" placeholder="Enter sd_id" name="sd_id"></p>
