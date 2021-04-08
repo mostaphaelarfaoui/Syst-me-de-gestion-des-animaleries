@@ -8,11 +8,11 @@ if(isset($_GET['delete']))
     $query_run = mysqli_query($con,$query);
     if($query_run)
     {
-        echo 'data delete';
+        echo "<script language='javascript' type='text/javascript'> alert('done')</script>";
     }
     else
     {
-        echo 'data not delete';
+      echo "<script language='javascript' type='text/javascript'> alert('data not delete')</script>";
     }
 }
 ?>

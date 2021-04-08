@@ -43,19 +43,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    /* overflow: hidden; */
     border-radius: 5px;
     border: solid #31c924;
-    
-    
 }
 
 .animo input, select{
     width: 100%;
     padding-left: 10px;
     height: 44px;
-    /* box-sizing: border-box;
-    outline: none; */
     border: solid #31c924;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
@@ -70,6 +65,9 @@
     transform: scale(0.96);
 }
 .btn{
+    position: absolute;
+    top: 10%;
+    left: 1%;
     width: 100px;
     height: 30PX;
     margin-top: 30px;

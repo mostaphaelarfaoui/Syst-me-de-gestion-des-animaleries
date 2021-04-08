@@ -1,6 +1,23 @@
 <?php
 session_start();
 include("./connection_db.php");
+if(isset($_GET['delete']))
+{
+    $id = $_GET['id'];
+    $query = "DELETE FROM sales_details WHERE sd_id = '$id'";
+    $query_run = mysqli_query($con,$query);
+    if($query_run)
+    {
+      echo "<script language='javascript' type='text/javascript'> alert('done')</script>";
+    }
+    else
+    {
+      echo "<script language='javascript' type='text/javascript'> alert('data not delete')</script>";
+
+    }
+}
+?>
+<?php
 $query = "SELECT * from sales_details";
 $result = mysqli_query($con,$query);
 ?>
@@ -46,9 +63,9 @@ $result = mysqli_query($con,$query);
     <?php endif;  ?>
   </tbody>
 </table>
-<form action="" methode= "POST">
-    <input type="text" class="inp" placeholder="Enter the id delete" >
-    <button class="btn5" name="delete" type="submit">Delete</button>
+<form action="" methode= "GET">
+    <input type="text" class="inp" name="id" placeholder="Enter the id delete" >
+    <button class="btn4" name="delete" type="submit">Delete</button>
     </form>
 </body>
 </html>
