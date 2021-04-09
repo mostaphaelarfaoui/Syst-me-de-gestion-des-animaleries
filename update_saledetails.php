@@ -21,8 +21,7 @@ if(isset($_POST['update']))
     }
     else
     {
-        echo "<script language='javascript' type='text/javascript'> alert('not done!')</script>";
-
+        echo "<script language='javascript' type='text/javascript'> alert('done!')</script>";
     }
 }
 ?>
@@ -47,8 +46,7 @@ if(isset($_POST['update']))
                 <p><input type="text" placeholder="Enter sd_id" name="sd_id"></p>
                 <p><input type="text" placeholder="Enter cs_id" name="cs_id"></p>
                 <p><input type="date" placeholder="Enter date" name="date"></p>
-                <p><input type="text" placeholder="total" name="total" > 
-                
+                <p><input type="text" placeholder="total" name="total" >   
                 <input type="submit" value="update" name="update" class="save_btn">
             </form>
         </div>
