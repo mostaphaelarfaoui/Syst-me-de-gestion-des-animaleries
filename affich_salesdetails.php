@@ -65,7 +65,7 @@ $result = mysqli_query($con,$query);
 </table>
 <form action="" methode= "GET">
     <input type="text" class="inp" name="id" placeholder="Enter the id delete" >
-    <button class="btn4" name="delete" type="submit">Delete</button>
+    <button class="btn3" name="delete" type="submit">Delete</button>
     </form>
 </body>
 </html>

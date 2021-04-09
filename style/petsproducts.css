@@ -39,7 +39,7 @@ table{
 }
 .btn1{
     position: absolute;
-    top: 3%;
+    top: 2%;
     left: 5%;
     background-color:#f71515 ;
     color: #ffff;
@@ -62,7 +62,7 @@ table{
 .btn2{
     position: absolute;
     top: 3%;
-    left: 80%;
+    left: 84%;
     background-color:#f71515;
     color: #ffffff;
     color: #ffff;
@@ -90,18 +90,18 @@ table{
     border-radius: 25% 10%;
 }
 .inp{
-        margin-left: 2%;
-        width: 15%;
-        height: 5%;
-        border: 1px;
-        border-radius: 5px;
-        padding: 8px 15px 8px 15px;
-        margin-left: 2%;
-        box-shadow: 1px 1px 2px 1px grey;
+    margin-left: 2%;
+    width: 15%;
+    height: 5%;
+    border: 1px;
+    border-radius: 5px;
+    padding: 8px 15px 8px 15px;
+    margin-left: 2%;
+    box-shadow: 1px 1px 2px 1px grey;
     }
-    #customers th {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: left;
-        background-color: #f71515;
-        color: white;}
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f71515;
+    color: white;}
