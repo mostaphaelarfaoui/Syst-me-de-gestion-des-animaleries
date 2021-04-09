@@ -16,11 +16,13 @@ if(isset($_POST['update']))
     $result = mysqli_query($con,$query);
     if($result)
     {
-        echo "your update is success";
+        echo "<script language='javascript' type='text/javascript'> alert('done!')</script>";
+
     }
     else
     {
-        echo " your update not success";
+        echo "<script language='javascript' type='text/javascript'> alert('not done!')</script>";
+
     }
 }
 ?>
