@@ -46,7 +46,7 @@ if(isset($_POST['save'])){
         die("error").mysqli_error($result);
     }
     else{
-       echo"done!";
+        echo "<script language='javascript' type='text/javascript'> alert('done!')</script>";
     }
     }
 ?>

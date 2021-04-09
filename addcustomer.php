@@ -10,9 +10,9 @@ if(isset($_POST['add'])){
     $query = "INSERT INTO customers (fname, minit, lname, adress) VALUES ('$cs_fname', '$cs_minit', '$cs_lname', '$address')";
     $query_run = mysqli_query($con, $query);
     if($query_run){
-        echo 'add ok';
+        echo "<script language='javascript' type='text/javascript'> alert('done!')</script>";
     }else{
-        echo 'add not ok';
+        echo "<script language='javascript' type='text/javascript'> alert('not done!')</script>";
     }
 }
 ?>
