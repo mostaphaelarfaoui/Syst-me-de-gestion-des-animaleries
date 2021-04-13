@@ -15,13 +15,13 @@ if(isset($_POST['save_btn'])){
         die("error").mysqli_error($result);
     }
     else{
-        echo "<script language='javascript' type='text/javascript'> alert('done!')</script>";
-
+        header('Location: ./affich_salesdetails.php');
     }
     }
     ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,25 +29,27 @@ if(isset($_POST['save_btn'])){
     <title>Document</title>
     <link rel="stylesheet" href="style/updatesales.css">
 </head>
+
 <body>
-<div class="container">
+    <div class="container">
         <div class="navbar">
             <div class="logo">
-            <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
-                
-            </div> 
+                <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
+
+            </div>
         </div>
         <a href="affich_salesdetails.php"> <button class="btn">Back</button></a>
         <div class="animo">
             <form action="" method="post">
-                <p><input type="text" placeholder="Enter sd_id"  name="sd_id"></p>
-                <p><input type="text" placeholder="Enter cs_id"  name="cs_id"></p>
-                <p><input type="date" placeholder="Enter date"  name="date"></p>
+                <p><input type="text" placeholder="Enter sd_id" name="sd_id"></p>
+                <p><input type="text" placeholder="Enter cs_id" name="cs_id"></p>
+                <p><input type="date" placeholder="Enter date" name="date"></p>
                 <p><input type="text" placeholder="Enter total" name="total"></p>
                 <input type="submit" value="save" name="save_btn" class="save_btn">
             </form>
         </div>
     </div>
-</div>
+    </div>
 </body>
+
 </html>
