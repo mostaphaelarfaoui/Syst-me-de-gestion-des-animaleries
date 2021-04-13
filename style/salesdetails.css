@@ -48,11 +48,7 @@ section {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 600;
-  letter-spacing: 1px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+
 }
 .btn2 {
   position: absolute;
@@ -69,11 +65,6 @@ section {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 600;
-  letter-spacing: 1px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
 }
 
 .btn3 {
@@ -92,10 +83,6 @@ section {
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 1px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
 }
 
 .inp {
