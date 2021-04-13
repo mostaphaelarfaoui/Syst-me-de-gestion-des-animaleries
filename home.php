@@ -1,18 +1,18 @@
 <?php
 session_start();
 include("./connection_db.php");
-if (isset($_POST['enter'])) {
- $name = trim(strip_tags($_POST["user_name"]));
+if (isset($_POST['login'])) {
+ $lname = trim(strip_tags($_POST["lname"]));
  $pass = trim(strip_tags($_POST["password"]));
 
- $query = "SELECT * FROM admin WHERE user_name = '$name' && password = '$pass'";
+ $query = "SELECT * FROM customers WHERE lname = '$lname' && password = '$pass'";
  $result=mysqli_query($con,$query);
  if($result)
  {
     while($row=mysqli_fetch_assoc($result)){
-        if($name === $row['user_name'] && $pass===$row['password'])
+        if($lname === $row['lname'] && $pass===$row['password'])
         {  
-            $_SESSION["user_name"] = $name;        
+            $_SESSION["lname"] = $lname;        
               header('Location: ./homer.php');     
         }
         else
@@ -25,6 +25,7 @@ if (isset($_POST['enter'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     </script>
     <meta charset="UTF-8">
@@ -33,20 +34,23 @@ if (isset($_POST['enter'])) {
     <link rel="stylesheet" href="style/home.css">
     <title>Login in</title>
 </head>
+
 <body>
     <div class="petshop">
         <a class="active" href=""><img src="img//ic_add_pet.png"></a>
         <a href="">pets shop</a>
     </div>
-<form action="" method="POST">  
- <div class="container">
-    <h2 class="login">Login</h2><br>
-    <input type="lname" name="user_name" placeholder="enter your user_name" class="bord" ><br>
-    <input type="password" name="password" placeholder="enter yourPassword" class="bord"><br>
-    <input type="submit" name="enter" class="btn" value="Envoyer"><br>
+    <form action="" method="POST">
+        <div class="container">
+            <h2 class="login">Login</h2><br>
+            <input type="text" name="lname" placeholder="enter your lname" class="bord"><br>
+            <input type="password" name="password" placeholder="enter yourPassword" class="bord"><br>
+            <input type="submit" name="login" class="btn" value="Login"><br>
     </form>
-</div>
+    </div>
 </body>
-</html>  
+
+</html>
 </body>
+
 </html>
