@@ -13,13 +13,14 @@ if(isset($_POST['save'])){
         die("error").mysqli_error($result);
     }
     else{
-        echo "<script language='javascript' type='text/javascript'> alert('done!')</script>";
+        header('Location: ./affich_products.php');
 
     }
     }
     ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,24 +28,26 @@ if(isset($_POST['save'])){
     <title>Document</title>
     <link rel="stylesheet" href="style/addproduct.css">
 </head>
+
 <body>
-<div class="container">
+    <div class="container">
         <div class="navbar">
             <div class="logo">
-            <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>    
-            </div> 
+                <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
+            </div>
         </div>
         <a href="affich_products.php"> <button class="btn">Back</button></a>
         <div class="animo">
             <form action="" method="post">
-                <p><input type="text" placeholder="Enter pp_name"  name="pp_name"></p>
-                <p><input type="text" placeholder="Enter pp_type"  name="pp_type"></p>
+                <p><input type="text" placeholder="Enter pp_name" name="pp_name"></p>
+                <p><input type="text" placeholder="Enter pp_type" name="pp_type"></p>
                 <p><input type="text" placeholder="Enter cost" name="cost"></p>
                 <p><input type="text" placeholder="Enter belongs_to" name="belongs_to"></p>
                 <input type="submit" value="save" name="save" class="save_btn">
             </form>
         </div>
     </div>
-</div>
+    </div>
 </body>
+
 </html>

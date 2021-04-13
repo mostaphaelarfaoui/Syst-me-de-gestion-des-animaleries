@@ -10,25 +10,25 @@ if(isset($_POST['update']))
     $cos  = $_POST['cost'];
 
     $query = " UPDATE birds SET   pet_category = '".$cat."',
-                                       type = '".$typ."',
-                                       noise = '".$noi."',
-                                       cost = '".$cos."'
-                                WHERE  pet_id = '".$userid."'";
+                                       type    = '".$typ."',
+                                       noise   = '".$noi."',
+                                       cost    = '".$cos."'
+                                WHERE  pet_id  = '".$userid."'";
     $result = mysqli_query($con,$query);
     if($result)
     {
-        echo "<script language='javascript' type='text/javascript'> alert('done!')</script>";
-
+        header('Location: ./affich_birds.php');
     }
     else
     {
-        echo "<script language='javascript' type='text/javascript'> alert('not done!')</script>";
+        echo "<script language='javascript' type='text/javascript'> alert('data not update!')</script>";
 
     }
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,11 +36,12 @@ if(isset($_POST['update']))
     <link rel="stylesheet" href="style/update_birds.css">
     <title>add birds</title>
 </head>
+
 <body>
     <div class="container">
         <div class="navbar">
-            <div class="logo"><a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>  
-            </div> 
+            <div class="logo"><a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
+            </div>
         </div>
         <a href="affich_birds.php"> <button class="btn">Back</button></a>
         <div class="animo">
@@ -53,12 +54,13 @@ if(isset($_POST['update']))
                     <option value="low">low</option>
                     <option value="moderate">moderate</option>
                     <option value="high">high</option>
-                </select> 
-                <p><input type="text" placeholder="Enter cost" name="cost" >
-                <input type="submit" value="update" name="update" class="save_btn">
+                </select>
+                <p><input type="text" placeholder="Enter cost" name="cost">
+                    <input type="submit" value="update" name="update" class="save_btn">
             </form>
         </div>
     </div>
-</div>
+    </div>
 </body>
+
 </html>

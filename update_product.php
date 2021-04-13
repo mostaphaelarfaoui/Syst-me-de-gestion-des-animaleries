@@ -17,18 +17,18 @@ if(isset($_POST['update']))
     $result = mysqli_query($con,$query);
     if($result)
     {
-        echo "<script language='javascript' type='text/javascript'> alert('done!')</script>";
-
+        header('Location: ./affich_products.php');
     }
     else
     {
-        echo "<script language='javascript' type='text/javascript'> alert('not done!')</script>";
+        echo "<script language='javascript' type='text/javascript'> alert('data not update!')</script>";
 
     }
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,11 +36,12 @@ if(isset($_POST['update']))
     <link rel="stylesheet" href="style/addproduct.css">
     <title>update product</title>
 </head>
+
 <body>
     <div class="container">
         <div class="navbar">
             <div class="logo"><a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
-            </div> 
+            </div>
         </div>
         <a href="affich_products.php"> <button class="btn">Back</button></a>
         <div class="animo">
@@ -48,12 +49,13 @@ if(isset($_POST['update']))
                 <p><input type="text" placeholder="Enter pp_id" name="id"></p>
                 <p><input type="text" placeholder="Enter pp_fname" name="pp_fname"></p>
                 <p><input type="text" placeholder="Enter pp_type" name="pp_type"></p>
-                <p><input type="text" placeholder="Enter cost" name="cost" > 
-                <p><input type="text" placeholder="Enter belongs_to" name="belongs_to" >
-                <input type="submit" value="update" name="update" class="save_btn">
+                <p><input type="text" placeholder="Enter cost" name="cost">
+                <p><input type="text" placeholder="Enter belongs_to" name="belongs_to">
+                    <input type="submit" value="update" name="update" class="save_btn">
             </form>
         </div>
     </div>
-</div>
+    </div>
 </body>
+
 </html>

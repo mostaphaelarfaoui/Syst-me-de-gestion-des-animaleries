@@ -10,7 +10,7 @@ if(isset($_POST['add'])){
     $query = "INSERT INTO customers (fname, minit, lname, adress) VALUES ('$cs_fname', '$cs_minit', '$cs_lname', '$address')";
     $query_run = mysqli_query($con, $query);
     if($query_run){
-        echo "<script language='javascript' type='text/javascript'> alert('done!')</script>";
+        header('Location: ./affich_customers.php');
     }else{
         echo "<script language='javascript' type='text/javascript'> alert('not done!')</script>";
     }
@@ -19,6 +19,7 @@ if(isset($_POST['add'])){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,24 +27,26 @@ if(isset($_POST['add'])){
     <link rel="stylesheet" href="style/update_customer.css">
     <title>add customer</title>
 </head>
+
 <body>
     <div class="container">
         <div class="navbar">
             <div class="logo">
-            <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
-            </div> 
+                <a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
+            </div>
         </div>
         <a href="affich_customers.php"> <button class="btn">Back</button></a>
         <div class="animo">
             <form action="" method="post">
                 <p><input type="text" placeholder="Enter cs_fname" name="cs_fname"></p>
                 <p><input type="text" placeholder="Enter cs_minit" name="cs_minit"></p>
-                <p><input type="text" placeholder="Enter cs_lname" name="cs_lname" > 
-                <p><input type="text" placeholder="Enter cs_address" name="address" >
-                <input type="submit" value="add" name="add" class="save_btn">
+                <p><input type="text" placeholder="Enter cs_lname" name="cs_lname">
+                <p><input type="text" placeholder="Enter cs_address" name="address">
+                    <input type="submit" value="add" name="add" class="save_btn">
             </form>
         </div>
     </div>
-</div>
+    </div>
 </body>
+
 </html>

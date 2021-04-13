@@ -9,26 +9,26 @@ if(isset($_POST['update']))
     $cs_lname = $_POST['cs_lname'];
     $address  = $_POST['address'];
 
-    $query = " UPDATE customers  SET   fname = '".$cs_fname."',
-                                       minit = '".$cs_minit."',
-                                       lname = '".$cs_lname."',
+    $query = " UPDATE customers  SET   fname  = '".$cs_fname."',
+                                       minit  = '".$cs_minit."',
+                                       lname  = '".$cs_lname."',
                                        adress = '".$address."'
-                                WHERE  cs_id = '".$userid."'";
+                                WHERE  cs_id  = '".$userid."'";
     $result = mysqli_query($con,$query);
     if($result)
     {
-        echo "<script language='javascript' type='text/javascript'> alert('done!')</script>";
-
+        header('Location: ./affich_customers.php');
     }
     else
     {
-        echo "<script language='javascript' type='text/javascript'> alert('not done!')</script>";
+        echo "<script language='javascript' type='text/javascript'> alert('data not update!')</script>";
 
     }
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,11 +36,12 @@ if(isset($_POST['update']))
     <link rel="stylesheet" href="style/update_customer.css">
     <title>add customer</title>
 </head>
+
 <body>
     <div class="container">
         <div class="navbar">
-            <div class="logo"><a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a> 
-            </div> 
+            <div class="logo"><a class="active" href="homer.php"><img src="img//ic_add_pet.png"></a>
+            </div>
         </div>
         <a href="affich_customers.php"> <button class="btn">Back</button></a>
         <div class="animo">
@@ -48,12 +49,13 @@ if(isset($_POST['update']))
                 <p><input type="text" placeholder="Enter cs_id" name="id"></p>
                 <p><input type="text" placeholder="Enter cs_fname" name="cs_fname"></p>
                 <p><input type="text" placeholder="Enter cs_minit" name="cs_minit"></p>
-                <p><input type="text" placeholder="Enter cs_lname" name="cs_lname" > 
-                <p><input type="text" placeholder="Enter cs_address" name="address" >
-                <input type="submit" value="update" name="update" class="save_btn">
+                <p><input type="text" placeholder="Enter cs_lname" name="cs_lname">
+                <p><input type="text" placeholder="Enter cs_address" name="address">
+                    <input type="submit" value="update" name="update" class="save_btn">
             </form>
         </div>
     </div>
-</div>
+    </div>
 </body>
+
 </html>
